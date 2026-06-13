@@ -1,0 +1,98 @@
+<html>
+    <head> 
+        <title>My Game Profile</title>
+        <style>
+            body { 
+                font-family: Arial, sans-serif;
+                background: aliceblue;
+                text-align: center;
+                padding: 30px;
+            }
+            h1 { color: navy; }
+        button {
+            background: navy;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+        }
+        div { 
+            border: 1px solid navy;
+            width: 280px;
+            margin: 6px auto;
+            padding: 8px 12px;
+            text-align: left;
+            border-radius: 6px; 
+        }
+        </style>
+    </head>
+    <body>
+        <h1>My Game Profile</h1>
+        <button onclick="showProfile()">Show My Profile</button>
+         
+        <div>Name: <span id="name"></span></div>
+        <div>Score: <span id="score"></span></div>
+        <div>Top Score: <span id="record"></span></div>
+        <div>Rank: <span id="rank"></span></div>
+        <div>Greeting: <span id="greeting"></span></div>
+        <div>Star: <span id="stars"></span></div>
+        <div>Bonus Level: <span id="bonus"></span></div>
+        <div>Team Name: <span id="team"></span></div>
+
+        <script>
+function showProfile() {
+        // Variables
+        let name     = "Alex";
+        let myscore    = 75;
+        let highscore   = 100;
+        let bonus       = null;
+        let team;
+
+        // comparison Operator
+        let isTopScore = myScore == highscore;
+
+        // if / else - Rank
+        let rank;
+        if (myScore >= 80
+        ) {
+            rank = "gold";
+        } else if (myScore >= 50
+        ) {
+            rank = "silver";
+        } 
+        else { rank = "Bronze";
+        }
+
+// date object - greeting
+let Hour = new Date().getHours();
+let greeting;
+if (Hour < 12) {
+    greeting = "Good Morning!";
+} else if (Hour < 17) {
+    greeting = "Good Afternoon!";
+} else {
+    greeting = "Good Evening!";
+}
+
+ // While Loop - Stars
+let stars = "";
+let count = 0;
+while (count < 5) {
+    stars = stars + "⭐";
+    count = count + 1;
+}         
+
+// String Concatention - Show on page
+document.getElementById("name").innerText = name;
+document.getElementById("score").innerText = myScore + " Out of " + highscore;
+document.getElementById("record").innerText = isTopScore;
+document.getElementById("rank").innerText = rank;
+document.getElementById("greeting").innerText = greeting;
+document.getElementById("stars").innerText = stars;
+document.getElementById("bonus").innerText = bonus;
+document.getElementById("team").innerText = team;
+}
+        </script>
+    </body>
+</html>
