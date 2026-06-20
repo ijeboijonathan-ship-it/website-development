@@ -1,0 +1,18 @@
+<html>
+<body>
+
+    <p>Multiply every element in the array by 18:</p>
+
+    <p id="product_value"></p>
+
+    <script>
+        var numbers = [28, 6, 19, 95];
+
+        function myFunction(num) {
+            return num * 18;
+        }
+        var newArray = numbers.map(myFunction);
+        document.getElementById("product_value").innerHTML = newArray;
+    </script>
+</body>
+</html>
