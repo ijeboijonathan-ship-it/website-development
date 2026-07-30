@@ -1,0 +1,25 @@
+<html>
+    <body>
+        <secttion>
+            <img classs="mySlides" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRr2m8yVmOf4pgG5kMA8jLt0QfpNZNROIvxH0-HoS7RFQ&s=10" style="height:500px;">
+            <img classs="mySlides" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTcfsITSvD7FdlSVIrEFKD9OTQ5o7Aa-J6hj_6VIR5P8w&s=10
+            " style="height:500px;">    
+        </secttion>
+        <script>
+            var myIndex = 0;
+            carousel();
+
+            function carousel() {
+                var i;
+                var x = document.getElementsByClassName("mySlides");
+                for (i = 0; i < x.length; i++) {
+                    x[i].style.display = "none";  
+                }
+                myIndex++;
+                if (myIndex > x.length) {myIndex = 1}    
+                x[myIndex-1].style.display = "block";  
+                setTimeout(carousel, 3000); // Change image every 3 seconds
+            }
+            </script>
+    </body>
+</html>
