@@ -1,62 +1,65 @@
-body {
-    font-family: 'Arial', sans-serif;
-    background-color: #0D1117;
-    color:#C9D1D9;
+.pimg1, .pimg2, .pimg3 {
+  position: relative;
+  opacity: 0.70;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
-h1 {
-    color: #58A6FF;
+.pimg1 {
+  background-image: url("website develupment/hamster.jpeg");
+  min-height: 100%;
 }
 
-/* Attribute Selector */
-a {
-    color: #8B949E;
-
+.pimg2 {
+  background-image: url("website develupment/dog.jpeg");
+  min-height: 400px;
 }
 
-a:hover {
-    color: #1F6FEB
+.pimg3 {
+  background-image: url("website develupment/cat.jpeg");
+  min-height: 400px;
 }
 
-/* child Selector */
-ul > li {
-    font-weight: bold;
+.section {
+  text-align: center;
+  padding: 50px 80px;
 }
 
-/* Sibling Selector */
-h1 + p {
-    background-color: #161B22:
-    padding: 10px;
-    border-radius: 5px;
+.section-light {
+  background-color: #f4f4f4;
+  color: #666;
 }
 
-/* :hover Pseudo-class*/
-ul li:hover {
-    color:#4F8CC9;
+.section-dark {
+  background-color: #282e34;
+  color: #ddd;
 }
 
-/* :nth-child(n) Pseudo-class */
-ul li:nth-child(3) {
-    background-color: #21262d;
+.ptext {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+  color: #000;
+  font-size: 27px;
+  letter-spacing: 8px;
+  text-transform: uppercase;
 }
 
-/* :not(selector) Pseudo-class */
-p:not(:first-of-type) {
-    text-decoration: underline;
+.ptext .border {
+  background-color: #111;
+  color: #fff;
+  padding: 20px;
 }
 
-/* ::before Pseudo-element */
-ul li:before {
-    content: "";
-}
+.ptext .border-trans {
+  background-color: transparent;
+  }
 
-/* ::after Pseudo-element */
-a::after {
-    content: "";
-}
-
-p::first-letter {
-
-    font-size200%;
-    color: #FF7B72;
-}
+  @media(max-width: 568px) {
+    .pimg1, .pimg2, .pimg3 {
+      background-attachment: scroll;
+    }
+  }
